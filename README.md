@@ -8,7 +8,7 @@ The YouTube search function has become quite inefficient these days. It tends to
 - “New channels for you”
 - “For you”
 
-To fix this, we can simply add to our searsh input: 'after:2004'
+To fix this, we can simply add to the searsh input: 'after:2004'
 ![9QdBwDP](https://github.com/BadisG/Improve-youtube-searsh/assets/110173477/d8c0c36d-13c4-41dc-a0f4-a883ab6b786a)
 
 The limitation of this approach is the necessity to rewrite this each time.   
