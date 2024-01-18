@@ -3,8 +3,7 @@ Automatically adds "after:2004" after pressing ENTER on the searsh bar
 
 # Context
 
-The YouTube search function has become quite inefficient these days, often yielding unrelated results. 
-It tends to suggest irrelevant things like:
+The YouTube search function has become quite inefficient these days. It tends to suggest irrelevant things like:
 - “People also watched”
 - “New channels for you”
 - “For you”
