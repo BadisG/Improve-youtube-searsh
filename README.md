@@ -12,7 +12,7 @@ To fix this, we can simply add to the searsh input: 'after:2004'
 ![9QdBwDP](https://github.com/BadisG/Improve-youtube-searsh/assets/110173477/d8c0c36d-13c4-41dc-a0f4-a883ab6b786a)
 
 The limitation of this approach is the necessity to rewrite this each time.   
-**This Chrome extension will conveniently rewrite 'after:2004' after you pressed Enter**
+**This script will conveniently rewrite 'after:2004' after you pressed Enter**
 
 # How to install (Method 1)
 ## 1) Install a user script manager:
