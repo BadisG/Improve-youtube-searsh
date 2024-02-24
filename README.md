@@ -14,8 +14,17 @@ To fix this, we can simply add to the searsh input: 'after:2004'
 The limitation of this approach is the necessity to rewrite this each time.   
 **This Chrome extension will conveniently rewrite 'after:2004' after you pressed Enter**
 
-# How to install
+# How to install (Method 1)
+## 1) Install a user script manager:
+   - For Firefox: [Greasemonkey](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/)
+   - For Chrome: [Tampermonkey](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=fr)
 
+
+## 2) Install the script there
+[Click on this link](https://github.com/BadisG/Improve-youtube-searsh/raw/main/Improve-youtube-searsh.user.js)
+
+
+# How to install (Method 2)
 ## 1) Download the repository somewhere in your PC
 ```git clone https://github.com/BadisG/Improve-youtube-searsh```
 
