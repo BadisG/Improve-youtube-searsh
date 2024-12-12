@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name     Improve-youtube-searsh 
-// @version  1
+// @name     Improve-youtube-searsh
+// @version  2.0
 // @grant    none
 // @match    https://*.youtube.com/*
 // ==/UserScript==
@@ -18,3 +18,4 @@ window.onload = function() {
         });
     }
 };
+
