@@ -1,12 +1,13 @@
 // ==UserScript==
-// @name     Improve-youtube-searsh
+// @name     Improve-youtube-search
+// @description     Improve-youtube-search
 // @version  2.0
 // @grant    none
 // @match    https://*.youtube.com/*
 // ==/UserScript==
 
 window.onload = function() {
-    let searchInput = document.querySelector('input#search');
+    let searchInput = document.querySelector('.ytSearchboxComponentInput');
     if (searchInput) {
         searchInput.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
@@ -14,8 +15,9 @@ window.onload = function() {
                 if (!searchInput.value.includes('after:2004')) {
                     searchInput.value += ' after:2004';
                 }
+                // Submit the form after modifying the input
+                searchInput.closest('form').submit();
             }
         });
     }
 };
-
