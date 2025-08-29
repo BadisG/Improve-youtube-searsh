@@ -1,13 +1,17 @@
 // ==UserScript==
-// @name     Improve-youtube-search
-// @description     Improve-youtube-search
-// @version  2.1
-// @grant    none
-// @match    https://*.youtube.com/*
+// @name         Improve-youtube-search
+// @description  Improve YouTube search with customizable query modifier
+// @version      2.3
+// @grant        none
+// @match        https://*.youtube.com/*
 // ==/UserScript==
 
+// =======================
+// 🔧 CONFIGURATION
+// =======================
+const SEARCH_MODIFIER = "after:2004";
+
 function addSearchListener() {
-    // Using multiple possible selectors for better compatibility
     const searchInput = document.querySelector('input#search, .ytd-searchbox-spt, [name="search_query"]');
 
     if (searchInput && !searchInput.hasAttribute('search-listener-added')) {
@@ -15,9 +19,18 @@ function addSearchListener() {
         searchInput.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
-                if (!searchInput.value.includes('after:2004')) {
-                    searchInput.value += ' after:2004';
+
+                let currentValue = searchInput.value.trim();
+                if (SEARCH_MODIFIER) {
+                    const modifiers = SEARCH_MODIFIER.split(/\s+/); // split into tokens
+                    modifiers.forEach(mod => {
+                        if (!currentValue.includes(mod)) {
+                            currentValue += " " + mod;
+                        }
+                    });
                 }
+
+                searchInput.value = currentValue.trim();
                 searchInput.closest('form').submit();
             }
         });
@@ -32,7 +45,6 @@ const observer = new MutationObserver(() => {
     addSearchListener();
 });
 
-// Start observing the document with the configured parameters
 observer.observe(document.body, {
     childList: true,
     subtree: true
